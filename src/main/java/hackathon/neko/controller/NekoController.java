@@ -22,8 +22,8 @@ public class NekoController {
     HtmlService htmlService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index(){
-        return "tmp";
+    public String get(){
+        return "input";
     }
 
     @ResponseBody
