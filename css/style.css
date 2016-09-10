@@ -1,0 +1,9 @@
+.finish {
+  color: grey;
+}
+#cat {
+  background-color: red;
+  display: none;
+  height: 10px;
+  width: 10px;
+}

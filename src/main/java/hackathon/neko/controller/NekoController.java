@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -23,7 +22,7 @@ public class NekoController {
     HtmlService htmlService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String get(){
+    public String index(){
         return "tmp";
     }
 
@@ -32,7 +31,6 @@ public class NekoController {
     public List<Data> getData(){
         List<String> result = htmlService.extractFromHTML();
         List<Data> data= htmlService.convertToData(result);
-        Collections.shuffle(data);
         return Arrays.asList(data.get(0));
     }
 
