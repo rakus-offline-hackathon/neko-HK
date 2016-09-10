@@ -46,16 +46,15 @@ function renderCode() {
 // 問題のソースコードを取得
 function getCode() {
     $.ajax({
-        type:"post",                
+        type:"get",
         url:"http://localhost:8080/data",
-        contentType: 'application/json', 
+        contentType: 'application/json',
         dataType: "json",
-        success: function(json_data) {
-          // 成功時の処理
+        success: function(data) {
+          return data;
         }
     });
-//	var data = [{"title": "title1", "code": "code1", "result": "result1"},{"title": "title2", "code": "code2", "result": "result2"}];
-  return data;
+	// var data = [{"title": "title1", "code": "code1", "result": "result1"},{"title": "title2", "code": "code2", "result": "result2"}];
 }
 
 // キー入力された時の処理
