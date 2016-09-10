@@ -24,7 +24,7 @@ public class NekoController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String get(){
-        return "tmp";
+        return "input";
     }
 
     @ResponseBody
