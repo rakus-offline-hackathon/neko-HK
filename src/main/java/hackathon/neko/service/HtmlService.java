@@ -75,6 +75,6 @@ public class HtmlService {
                     || StringUtils.isEmpty(code)
                     || StringUtils.isEmpty(result) ?
                     null: new Data(title, code, result);
-        }).collect(Collectors.toList());
+        }).filter(r -> r != null && !r.getResult().contains("//")).collect(Collectors.toList());
     }
 }
